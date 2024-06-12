@@ -31,23 +31,9 @@ const ReadingListView = () => {
                         {readingList.slice(startIndex, endIndex).map((item: any, index: number) => {
                             const { title, author, coverPhotoURL } = item;
                             return (
-                                <Grid
-                                    item
-                                    key={index}
-                                    xs={12}
-                                    sm={6}
-                                    md={4}
-                                    lg={3}
-                                    display="flex"
-                                    justifyContent="flex-start"
-                                >
+                                <Grid item key={index} xs={12} sm={6} md={4} lg={3} display="flex"justifyContent="flex-start">
                                     <Card sx={{ width: '100%' }}>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={coverPhotoURL}
-                                            alt={title}
-                                        />
+                                        <CardMedia component="img" height="140" image={coverPhotoURL} alt={title}/>
                                         <CardContent>
                                             <Typography gutterBottom variant="body1" component="div">
                                                 {title}

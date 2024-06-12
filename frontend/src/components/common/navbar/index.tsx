@@ -3,7 +3,7 @@ import { AppBar, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { StyledLink, StyledButton} from './styles'
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
     return (
         <AppBar position="static">
             <Toolbar>

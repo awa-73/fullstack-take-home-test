@@ -12,7 +12,7 @@ import ReadingListView from './components/reading-list';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const App: React.FC = () => {
+const App = () => {
   const searchTerm = 'Some'
   const { loading, error, data } = useQuery(GET_ITEMS, {
     variables: { searchTerm },

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 
 interface Book {
@@ -15,7 +15,7 @@ interface ReadingListContextType {
 
 const ReadingListContext = createContext<ReadingListContextType | undefined>(undefined);
 
-const ReadingListProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+const ReadingListProvider = ({ children }:any) => {
   const [readingList, setReadingList] = useState<Book[]>([]);
   const notifySuccess = (message: string) => toast.success(message);
   const notifyWarning = (message: string) => toast.warn(message, {

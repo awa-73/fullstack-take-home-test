@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '../../utils/test-utils';
 import BooksView from '.';
-import userEvent from "@testing-library/user-event";
 
 const mockData = Array.from({ length: 50 }, (_, index) => ({
     coverPhotoURL: `assets/image${index}.webp`,

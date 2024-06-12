@@ -24,9 +24,9 @@ const BooksView = (data: any) => {
     const endIndex = startIndex + itemsPerPage;
 
     return (
-        <Container sx={{padding:'20px 10px'}}>
+        <Container sx={{ padding: '20px 10px' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                <FormControl variant="outlined" size="small" sx={{ width:'200px'}} data-testid="items-per-page-label">
+                <FormControl variant="outlined" size="small" sx={{ width: '200px' }} data-testid="items-per-page-label">
                     <InputLabel id="items-per-page-label">Items per page</InputLabel>
                     <Select
                         labelId="items-per-page-label"
@@ -34,7 +34,7 @@ const BooksView = (data: any) => {
                         data-testid='items-per-page'
                         label="Items per page"
                         onChange={handleItemsPerPageChange}
-                        sx={{ width:'200px'}}
+                        sx={{ width: '200px' }}
                     >
                         <MenuItem value={5}>5</MenuItem>
                         <MenuItem value={10}>10</MenuItem>
@@ -60,9 +60,13 @@ const BooksView = (data: any) => {
                     </Grid>
                 ))}
             </Grid>
-            <Box sx={{padding:'10px 0'}}>
-                <Button onClick={handlePrevPage} disabled={currentPage === 1} data-testid="prev-page-button">Previous Page</Button>
-                <Button onClick={handleNextPage} disabled={currentPage === totalPages} data-testid="next-page-button">Next Page</Button>
+            <Box sx={{ padding: '10px 0' }}>
+                <Button onClick={handlePrevPage} disabled={currentPage === 1} data-testid="prev-page-button">
+                    Previous Page
+                </Button>
+                <Button onClick={handleNextPage} disabled={currentPage === totalPages} data-testid="next-page-button">
+                    Next Page
+                </Button>
             </Box>
         </Container>
     );

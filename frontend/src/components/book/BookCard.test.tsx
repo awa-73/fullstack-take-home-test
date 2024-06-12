@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import BookCard from '.';
@@ -28,7 +28,7 @@ describe('BookCard Component', () => {
     });
 
     it('renders book details correctly', () => {
-        render(<BookCard book={mockBook} />);
+        render(<BookCard book={mockBook} /> as ReactNode);
 
         expect(screen.getByText('Test Book')).toBeInTheDocument();
         expect(screen.getByText('Author: Test Author')).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe('BookCard Component', () => {
     });
 
     it('calls addToReadingList when the button is clicked', () => {
-        render(<BookCard book={mockBook} />);
+        render(<BookCard book={mockBook} /> as ReactNode);
 
         const button = screen.getByTestId('add-to-reading-list');
         fireEvent.click(button);
