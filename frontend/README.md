@@ -21,7 +21,7 @@ For simplicity the reading list is stored in context state
 - Change directory into the root of the frontend folder 
 - While in the root directory, run `npm install` to install dependencies 
 - To start the application run `npm start` 
-- To run tests use the command `np
+- To run tests use the command `npm run test`
 - Access the application through the url [http://localhost:3000](http://localhost:3000)
 
 
