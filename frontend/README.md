@@ -11,9 +11,17 @@ This project has the following functionalities:
 For simplicity the reading list is stored in context state
 
 ## Running the application
-- Follow the instructions on the main README.md file before proceeding 
+
+### Run backend 
+
+- In the backend folder run `npm install` and `npm start`
+  
+### Run frontend
+ 
+- Change directory into the root of the frontend folder 
 - While in the root directory, run `npm install` to install dependencies 
 - To start the application run `npm start` 
+- To run tests use the command `np
 - Access the application through the url [http://localhost:3000](http://localhost:3000)
 
 
@@ -37,4 +45,30 @@ This consists of the following functionalities:
 ### Reading List
 
 - A grid view of all books that have been selected for reading list  
+
+## Screenshots
+
+### Books View Desktop
+
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/desktop.png)
+
+
+### Books View Mobile
+
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/mobile.png)
+
+
+### Search Error
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/search-error.png)
+
+### Search With Results
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/search.png)
+
+
+### Reading List
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/reading-list.png)
+
+### Reading Listh With No Books
+![Books view desktop](https://github.com/awa-73/fullstack-take-home-test/blob/main/frontend/src/docs/reading-list-no-books.png)
+
 
