@@ -1,7 +1,8 @@
 {
-  "name": "frontend",
+  "name": "ello-frontend",
   "version": "0.1.0",
   "private": true,
+  "author": "TITUS DISHON",
   "dependencies": {
     "@apollo/client": "^3.10.4",
     "@emotion/react": "^11.11.4",
