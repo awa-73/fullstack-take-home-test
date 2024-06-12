@@ -7,7 +7,7 @@ import CardActions from '@mui/material/CardActions';
 const ReadingListView = () => {
     const { readingList, removeFromReadingList } = useReadingList();
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 12; 
+    const itemsPerPage = 12;
 
     const totalPages = Math.ceil(readingList.length / itemsPerPage);
 
@@ -31,9 +31,9 @@ const ReadingListView = () => {
                         {readingList.slice(startIndex, endIndex).map((item: any, index: number) => {
                             const { title, author, coverPhotoURL } = item;
                             return (
-                                <Grid item key={index} xs={12} sm={6} md={4} lg={3} display="flex"justifyContent="flex-start">
+                                <Grid item key={index} xs={12} sm={6} md={4} lg={3} display="flex" justifyContent="flex-start">
                                     <Card sx={{ width: '100%' }}>
-                                        <CardMedia component="img" height="140" image={coverPhotoURL} alt={title}/>
+                                        <CardMedia component="img" height="140" image={coverPhotoURL} alt={title} />
                                         <CardContent>
                                             <Typography gutterBottom variant="body1" component="div">
                                                 {title}

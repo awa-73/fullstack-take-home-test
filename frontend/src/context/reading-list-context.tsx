@@ -1,28 +1,25 @@
 import React, { createContext, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
+import { IBook } from '../components/types/types';
 
-interface Book {
-  title: string;
-  author: string;
-  coverPhotoURL: string;
-}
+
 
 interface ReadingListContextType {
-  readingList: Book[];
-  addToReadingList: (item: Book) => void;
-  removeFromReadingList: (item: Book) => void;
+  readingList: IBook[];
+  addToReadingList: (item: IBook) => void;
+  removeFromReadingList: (item: IBook) => void;
 }
 
 const ReadingListContext = createContext<ReadingListContextType | undefined>(undefined);
 
 const ReadingListProvider = ({ children }:any) => {
-  const [readingList, setReadingList] = useState<Book[]>([]);
+  const [readingList, setReadingList] = useState<IBook[]>([]);
   const notifySuccess = (message: string) => toast.success(message);
   const notifyWarning = (message: string) => toast.warn(message, {
 
   });
 
-  const addToReadingList = (item: Book) => {
+  const addToReadingList = (item: IBook) => {
     const isDuplicate = readingList.some((existingItem) => existingItem.title === item.title);
     if (!isDuplicate) {
       setReadingList((prevList) => [...prevList, item]);
@@ -32,7 +29,7 @@ const ReadingListProvider = ({ children }:any) => {
     }
   };
 
-  const removeFromReadingList = (book: Book) => {
+  const removeFromReadingList = (book: IBook) => {
     setReadingList((prevList) => prevList.filter((item) => item.title !== book.title));
     notifySuccess('removed from reading list')
   };

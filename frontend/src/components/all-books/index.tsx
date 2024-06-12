@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import BookCard from '../book';
 import { Grid, Container, Button, Box, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent } from '@mui/material';
+import { IBook } from '../types/types';
 
-const BooksView = (data: any) => {
+interface BookViewProps {
+    data: IBook[];
+  }
+
+const BooksView:React.FC<BookViewProps> = ({ data })  => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(20);
-    const totalPages = Math.ceil(data.data.length / itemsPerPage);
+    const totalPages = Math.ceil(data.length / itemsPerPage);
 
     const handleNextPage = () => {
         setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
@@ -45,7 +50,7 @@ const BooksView = (data: any) => {
                 </FormControl>
             </Box>
             <Grid container spacing={4} justifyContent="center" data-testid="books-grid">
-                {data.data.slice(startIndex, endIndex).map((item: any, index: number) => (
+                {data.slice(startIndex, endIndex).map((item: IBook, index: number) => (
                     <Grid
                         item
                         key={index}

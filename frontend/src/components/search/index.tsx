@@ -40,7 +40,7 @@ const SearchBar = (data: any) => {
                             </ListItemAvatar>
                             <ListItemText primary={item.title} secondary={`By: ${item.author}`} />
                             <IconButton onClick={() => addToReadingList(item)} aria-label="add">
-                                <StyledAddButton color='primary' />
+                                <StyledAddButton color='secondary' />
                             </IconButton>
                         </ListItem>
                     ))}

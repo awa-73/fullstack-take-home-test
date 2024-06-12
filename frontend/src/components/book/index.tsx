@@ -4,8 +4,14 @@ import CardActions from '@mui/material/CardActions';
 import { useReadingList } from '../../context/reading-list-context';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { IBook } from '../types/types';
 
-const BookCard = ({ book }: any) => {
+interface BookCardProps {
+  book: IBook;
+}
+
+const BookCard:React.FC<BookCardProps> = ({ book }) => {
+  
   const { title, author, coverPhotoURL } = book;
   const { addToReadingList, readingList } = useReadingList();
 
@@ -26,7 +32,7 @@ const BookCard = ({ book }: any) => {
       </CardContent>
       <CardActions>
         {bookIsInYourReadingList && bookIsInYourReadingList.length > 0 ?
-          <FavoriteIcon color='error' /> : <FavoriteBorderIcon onClick={() => addToReadingList(book)} data-testid='add-to-reading-list' />
+          <FavoriteIcon color='error' /> : <FavoriteBorderIcon color='secondary' onClick={() => addToReadingList(book)} data-testid='add-to-reading-list' />
         }
       </CardActions>
     </Card>

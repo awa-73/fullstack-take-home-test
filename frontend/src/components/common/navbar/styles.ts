@@ -15,6 +15,7 @@ const StyledButton = styled(Button)`
   margin-left: 4rem;
   font-size: 0.6rem;
   font-weight:bold;
+  color:#ffffff;
 `;
 
 export { StyledLink, StyledButton };
