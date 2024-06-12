@@ -49,7 +49,7 @@ const BooksView:React.FC<BookViewProps> = ({ data })  => {
                     </Select>
                 </FormControl>
             </Box>
-            <Grid container spacing={4} justifyContent="center" data-testid="books-grid">
+            <Grid container spacing={4} justifyContent="flex-start" data-testid="books-grid">
                 {data.slice(startIndex, endIndex).map((item: IBook, index: number) => (
                     <Grid
                         item

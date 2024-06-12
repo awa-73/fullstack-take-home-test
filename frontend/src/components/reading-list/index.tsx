@@ -47,9 +47,9 @@ const ReadingListView = () => {
                                                 onClick={() => removeFromReadingList(item)}
                                                 variant='contained'
                                                 data-testid='remove-from-list'
-                                                color='primary'
+                                                color='secondary'
                                                 aria-label="remove"
-                                                sx={{ fontSize: '0.7rem' }}
+                                                sx={{ fontSize: '0.7rem', color:'#FFFFFF' }}
                                             >
                                                 Remove from list
                                             </Button>

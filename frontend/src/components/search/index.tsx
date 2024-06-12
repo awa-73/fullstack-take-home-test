@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { StyledSearchBar,StyledAvatar, StyledDropdown, List, ListItem, ListItemText,StyledBox } from './style'
-import {  ListItemAvatar, IconButton } from '@mui/material';
+import { StyledSearchBar, StyledAvatar, StyledDropdown, List, ListItem, ListItemText, StyledBox } from './style'
+import { ListItemAvatar, IconButton, Alert } from '@mui/material';
 import { StyledAddButton } from '../common/styles'
 import { useReadingList } from '../../context/reading-list-context';
 
@@ -27,7 +27,7 @@ const SearchBar = (data: any) => {
             <StyledSearchBar
                 variant="outlined"
                 placeholder="Book"
-                value={searchTerm||''}
+                value={searchTerm || ''}
                 onChange={handleChange}
             />
 
@@ -45,13 +45,8 @@ const SearchBar = (data: any) => {
                         </ListItem>
                     ))}
                 </List>
-                ) : <List>
-                    <ListItem>
-                        <ListItemText>
-                            Book Not Found
-                        </ListItemText>
-                    </ListItem>
-                </List>}
+                ) : <Alert severity="error">Book Not Found</Alert>
+                }
             </StyledDropdown>
             }
         </StyledBox>

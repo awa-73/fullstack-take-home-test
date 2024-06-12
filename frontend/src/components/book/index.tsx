@@ -32,7 +32,7 @@ const BookCard:React.FC<BookCardProps> = ({ book }) => {
       </CardContent>
       <CardActions>
         {bookIsInYourReadingList && bookIsInYourReadingList.length > 0 ?
-          <FavoriteIcon color='error' /> : <FavoriteBorderIcon color='secondary' onClick={() => addToReadingList(book)} data-testid='add-to-reading-list' />
+          <FavoriteIcon color='error' sx={{cursor:'pointer'}}/> : <FavoriteBorderIcon color='secondary' onClick={() => addToReadingList(book)} data-testid='add-to-reading-list'  sx={{cursor:'pointer'}}/>
         }
       </CardActions>
     </Card>

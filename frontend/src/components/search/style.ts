@@ -10,10 +10,10 @@ const StyledSearchBar = styled(TextField)(({ theme }) => ({
 
 const StyledDropdown = styled(Paper)(({ theme }) => ({
   position: 'absolute',
-  width: '400px',
+  width: '380px',
   maxHeight: '400px',
   overflowY: 'auto',
-  zIndex: 1,
+  zIndex: 2,
   marginTop: theme.spacing(1),
 }));
 
@@ -25,7 +25,8 @@ const StyledAvatar = styled(Avatar)({
 const StyledBox = styled(Box)({
   maxWidth: '380px',
   margin: 'auto',
-  padding: '20px 10px'
+  paddingTop: '20px',
+  paddingBottom: '20px'
 });
 
 
